@@ -64,7 +64,7 @@ const popular = new Swiper('.reviews-slider', {
     }
   });
 
-  $('.telegram-form').on('submit', function (event) {
+  $('.faq-form').on('submit', function (event) {
 
     event.stopPropagation();
     event.preventDefault();
