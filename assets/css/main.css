@@ -1,0 +1,793 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  color: #1C1C1C;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.container {
+  max-width: 1640px;
+}
+
+.title__text {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+.sub-title__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.max-width {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header,
+.footer {
+  padding: 16px 0;
+}
+
+.header-list,
+.footer-list {
+  margin-right: 50px;
+  font-size: 20px;
+  color: #1C1C1C;
+  position: relative;
+}
+
+.header-list:last-child,
+.footer-list:last-child {
+  margin-right: 0;
+}
+
+.header-list::before,
+.footer-list::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #5162FF;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.header-list:hover::before,
+.footer-list:hover::before {
+  width: 100%;
+}
+
+.header-phone,
+.footer-phone {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5162FF;
+  padding: 20px 40px;
+  background: #F3F6F9;
+  -webkit-border-radius: 60px;
+          border-radius: 60px;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+}
+
+.header-phone:hover,
+.footer-phone:hover {
+  background: #5162FF;
+  color: #fff;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  background: #0009;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.menu .menu-close {
+  position: absolute;
+  top: 37px;
+  left: 290px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: #fff;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99;
+}
+
+.menu .menu-item {
+  width: 310px;
+  height: 100vh;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+  -webkit-animation: animMenu .3s linear;
+          animation: animMenu .3s linear;
+}
+
+.menu .menu-item::-webkit-scrollbar {
+  display: none;
+}
+
+@-webkit-keyframes animMenu {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes animMenu {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.wrapper {
+  padding: 70px 0 130px;
+}
+
+.wrapper__title {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.wrapper__text {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.wrapper__btn {
+  width: 341px;
+  height: 71px;
+  -webkit-border-radius: 60px;
+          border-radius: 60px;
+  background: #5162FF;
+  color: #fff;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  font-size: 24px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+}
+
+.wrapper__btn:hover {
+  background: #3C4275;
+}
+
+.wrapper__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.wrapper .img1 {
+  max-width: 194px;
+}
+
+.wrapper .img2 {
+  max-width: 250px;
+}
+
+.wrapper .img3 {
+  max-width: 400px;
+}
+
+.our-advantages {
+  padding: 120px 0 200px;
+  background: #f5f5f5;
+}
+
+.our-advantages-card {
+  margin-top: 145px;
+  width: 18%;
+  padding: 55px 20px 20px 20px;
+  -webkit-border-radius: 18px;
+          border-radius: 18px;
+  background: #5162FF;
+  color: #fff;
+  position: relative;
+  -webkit-transition: .3s all;
+  -o-transition: .3s all;
+  transition: .3s all;
+  margin-right: 20px;
+}
+
+.our-advantages-card:last-child {
+  margin-right: 0;
+}
+
+.our-advantages-card-head {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  -webkit-border-radius: 17px;
+          border-radius: 17px;
+  background: #fff;
+  -webkit-box-shadow: 0px 20px 20px -20px #283078;
+          box-shadow: 0px 20px 20px -20px #283078;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -70px;
+}
+
+.our-advantages-card__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.our-advantages-card__text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #DBDBDB;
+}
+
+.our-advantages-card:hover {
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 20px 20px -20px #283078;
+          box-shadow: 0px 20px 20px -20px #283078;
+}
+
+.help {
+  padding: 120px 0;
+}
+
+.help-card {
+  width: 300px;
+  padding: 20px;
+  -webkit-border-radius: 18px;
+          border-radius: 18px;
+  background: #F3F6F9;
+  margin-top: 40px;
+}
+
+.help-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.help-card__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.main {
+  padding: 120px 0;
+}
+
+.main .faq {
+  width: 30%;
+  margin-right: 200px;
+}
+
+.main .faq-form {
+  margin-top: 95px;
+}
+
+.main .faq-form__lab {
+  margin-top: 40px;
+  color: #585858;
+}
+
+.main .faq-form__inp {
+  height: 62px;
+  -webkit-border-radius: 18px;
+          border-radius: 18px;
+  border: 1px solid #C8C8C8;
+  outline: none;
+  padding: 0 20px;
+}
+
+.main .faq-form__inp:focus {
+  border: 1px solid #5162FF;
+}
+
+.main .faq-form__btn {
+  width: 100%;
+  height: 62px;
+  -webkit-border-radius: 48px;
+          border-radius: 48px;
+  background: #5162FF;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  margin-top: 60px;
+}
+
+.main .faq-form__btn:hover {
+  background: #3C4275;
+}
+
+.main .reviews {
+  width: 50%;
+}
+
+.main .reviews .rewievs__btns {
+  position: absolute;
+  left: -80px;
+  bottom: 0;
+}
+
+.main .reviews .swiper_btn {
+  width: 66px;
+  height: 66px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #F3F6F9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.main .reviews .swiper_btn:hover svg path {
+  stroke: #5162FF;
+  fill: #5162FF;
+}
+
+.main .reviews-slider {
+  margin-top: 130px;
+}
+
+.main .reviews .reviews-slide-pagination {
+  width: 40px;
+  color: #5162FF;
+  font-weight: 600;
+}
+
+.main .reviews .review-card {
+  background: #F3F6F9;
+  -webkit-border-radius: 18px;
+          border-radius: 18px;
+  padding: 30px;
+  position: relative;
+  height: 346px;
+  padding-bottom: 45px;
+}
+
+.main .reviews .review-card__avatar {
+  min-width: 58px;
+  min-height: 58px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -o-object-position: center;
+     object-position: center;
+  margin-right: 20px;
+}
+
+.main .reviews .review-card .user__name {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main .reviews .review-card__text {
+  font-size: 24px;
+  line-height: 33px;
+  margin-top: 30px;
+}
+
+.main .reviews .review-card__date {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-size: 20px;
+  color: #565656;
+}
+
+.footer {
+  margin-top: 120px;
+}
+
+@media (max-width: 1600px) {
+  .header,
+  .footer {
+    padding: 16px 0;
+  }
+  .header__logo svg,
+  .footer__logo svg {
+    width: 250px;
+  }
+  .header-list,
+  .footer-list {
+    margin-right: 40px;
+    font-size: 16px;
+  }
+  .header-phone,
+  .footer-phone {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+  .wrapper__title {
+    font-size: 60px;
+  }
+  .wrapper__text {
+    font-size: 20px;
+  }
+  .wrapper .img1 {
+    max-width: 150px;
+  }
+  .wrapper .img2 {
+    max-width: 220px;
+  }
+  .wrapper .img3 {
+    max-width: 350px;
+  }
+  .main {
+    padding: 0 0 120px 15px;
+  }
+  .main .faq {
+    width: 30%;
+    margin-right: 0;
+  }
+  .main .faq-form {
+    margin-top: 95px;
+  }
+  .main .faq-form__lab {
+    margin-top: 40px;
+    color: #585858;
+  }
+  .main .faq-form__inp {
+    height: 62px;
+    -webkit-border-radius: 18px;
+            border-radius: 18px;
+    border: 1px solid #C8C8C8;
+    outline: none;
+    padding: 0 20px;
+  }
+  .main .faq-form__inp:focus {
+    border: 1px solid #5162FF;
+  }
+  .main .faq-form__btn {
+    width: 100%;
+    height: 62px;
+    -webkit-border-radius: 48px;
+            border-radius: 48px;
+    background: #5162FF;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    margin-top: 60px;
+  }
+  .main .faq-form__btn:hover {
+    background: #3C4275;
+  }
+  .main .reviews {
+    width: 70%;
+    padding-left: 100px;
+  }
+  .main .reviews .rewievs__btns {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -90px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 15px;
+  }
+  .main .reviews-slider {
+    margin-top: 130px;
+  }
+  .main .reviews .review-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__logo svg,
+  .footer__logo svg {
+    width: 200px;
+  }
+  .header-list,
+  .footer-list {
+    margin-right: 20px;
+  }
+  .wrapper .img1 {
+    max-width: 130px;
+  }
+  .wrapper .img2 {
+    max-width: 180px;
+  }
+  .wrapper .img3 {
+    max-width: 300px;
+  }
+  .our-advantages-card {
+    width: 25%;
+  }
+  .main .faq {
+    width: 50%;
+    margin-right: 0;
+  }
+  .main .faq-form {
+    margin-top: 95px;
+  }
+  .main .faq-form__lab {
+    margin-top: 40px;
+    color: #585858;
+  }
+  .main .faq-form__inp {
+    height: 62px;
+    -webkit-border-radius: 18px;
+            border-radius: 18px;
+    border: 1px solid #C8C8C8;
+    outline: none;
+    padding: 0 20px;
+  }
+  .main .faq-form__inp:focus {
+    border: 1px solid #5162FF;
+  }
+  .main .faq-form__btn {
+    width: 100%;
+    height: 62px;
+    -webkit-border-radius: 48px;
+            border-radius: 48px;
+    background: #5162FF;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    margin-top: 60px;
+  }
+  .main .faq-form__btn:hover {
+    background: #3C4275;
+  }
+  .main .reviews {
+    margin-top: 40px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .main .reviews .rewievs__btns {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -90px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 15px;
+  }
+  .main .reviews-slider {
+    margin-top: 20px;
+  }
+  .main .reviews .review-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__logo svg,
+  .footer__logo svg {
+    width: auto;
+  }
+  .header-list,
+  .footer-list {
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .header-phone,
+  .footer-phone {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .our-advantages-card {
+    width: 45%;
+  }
+  .wrapper__title {
+    font-size: 60px;
+  }
+  .wrapper__text {
+    font-size: 20px;
+  }
+  .wrapper .img1 {
+    max-width: 150px;
+  }
+  .wrapper .img2 {
+    max-width: 220px;
+  }
+  .wrapper .img3 {
+    max-width: 350px;
+  }
+  .main .faq {
+    width: 100%;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title__text {
+    font-size: 36px;
+    line-height: 43px;
+  }
+  .sub-title__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .wrapper {
+    padding: 50px 0 120px;
+  }
+  .wrapper__title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .wrapper__text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .wrapper__btn {
+    width: 100%;
+    font-size: 20px;
+    height: 68px;
+  }
+  .wrapper .img1 {
+    max-width: 95px;
+  }
+  .wrapper .img2 {
+    max-width: 132px;
+  }
+  .wrapper .img3 {
+    max-width: 205px;
+  }
+  .our-advantages {
+    padding: 20px 0 100px;
+  }
+  .our-advantages-card {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 107px;
+  }
+  .main .faq-form {
+    margin-top: 50px;
+  }
+  .main .reviews {
+    padding-right: 15px;
+    margin-top: 120px;
+  }
+}
