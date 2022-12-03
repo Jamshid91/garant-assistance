@@ -92,7 +92,7 @@ const popular = new Swiper('.reviews-slider', {
     });
     
     $.ajax({
-        url: 'telegram.php',
+        url: 'ajax.php',
         type: 'POST',
         data: data,
         cache: false,
