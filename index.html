@@ -210,18 +210,14 @@
             <div class="faq" id="faq">
                     <p class="title__text">Остались вопросы?</p>
                     <p class="sub-title__text">Заполните анкету и наш менеджер свяжется с вами в ближайщее время</p>
-                    <form action="telegram.php" method="POST" class="faq-form">
+                    <form class="faq-form telegram-form">
                         <label for="userName" class="faq-form__lab w-100">
                             Ваше имя
-                            <input type="text" class="faq-form__inp w-100" id="userName" name="user_name" required>
-                        </label>
-                        <label for="userEmail" class="faq-form__lab w-100">
-                            Ваш почта
-                            <input type="email" class="faq-form__inp w-100" id="userEmail" name="user_email" required>
+                            <input type="text" class="faq-form__inp w-100" id="userName" name="name" autocomplete="off" required>
                         </label>
                         <label for="userPhone" class="faq-form__lab w-100">
                             Ваш номер
-                            <input type="number" class="faq-form__inp w-100" id="userPhone" name="user_phone" required>
+                            <input type="number" class="faq-form__inp w-100" id="userPhone" name="phone" autocomplete="off" required>
                         </label>
                         <button type="submit" class="faq-form__btn">Оставить заявку</button>
                     </form>
@@ -336,6 +332,7 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="assets/js/swiper.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
